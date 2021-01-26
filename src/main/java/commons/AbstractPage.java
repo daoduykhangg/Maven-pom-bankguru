@@ -653,7 +653,22 @@ public class AbstractPage {
 		return sortList.equals(arrayList);
 	}
 
+	
+	public void enterToTextboxByName(WebDriver driver, String value, String nameValue) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, nameValue);
+		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, value, nameValue);
+	}
+	
+	public void enterToTextareaByName(WebDriver driver, String value, String nameValue) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, nameValue);
+		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, value, nameValue);
+	}
 
+	public void clickToButtonByValue(WebDriver driver, String value) {
+		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, value);
+		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, value);
+	}
+	
 	private WebElement element;
 	private JavascriptExecutor jsExecutor;
 	private WebDriverWait explicitWait;

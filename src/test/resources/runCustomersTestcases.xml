@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Suite" parallel="false">
-  <test name="Test">
-    <classes>
-      <class name="com.bankguru.customer.Customer"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="Bankguru" parallel="false">
+
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.ExtentListenerVersion4" />
+		<listener class-name="reportConfig.AllureTestListener" />
+		<listener class-name="reportConfig.ReportNGListener" />
+		<!-- <listener class-name="retryConfig.RetryListener"/> -->
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+
+	<parameter name="url" value="http://demo.guru99.com/v4" />
+
+	<test name="Run on CHROME UI">
+		<parameter name="browser" value="chrome_ui" />
+		<classes>
+			<class name="com.bankguru.customer.Customer_01_New_Customer" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -142,7 +142,7 @@
 				<version>2.22.2</version>
 				<configuration>
 					<suiteXmlFiles>
-						<file>src/test/resources/runNopCommerceAdminTestcases.xml</file>
+						<file>src/test/resources/runCustomersTestcases.xml</file>
 					</suiteXmlFiles>
 
 					<argLine>

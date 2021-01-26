@@ -35,37 +35,14 @@
 		</layout>
 	</appender>
 
-	<category name="com.nopcommerce.users">
+	<category name="com.bankguru.customer">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />
 		<appender-ref ref="file" />
 		<appender-ref ref="testng" />
 	</category>
-	<category name="com.nopcommerce.user">
-		<priority value="all" />
-		<appender-ref ref="console" />
-		<appender-ref ref="logfile" />
-		<appender-ref ref="file" />
-		<appender-ref ref="testng" />
-	</category>
-
-	<category name="com.nopcommerce.admin">
-		<priority value="all" />
-		<appender-ref ref="console" />
-		<appender-ref ref="logfile" />
-		<appender-ref ref="file" />
-		<appender-ref ref="testng" />
-	</category>
-
-	<category name="com.orangehrm.employee">
-		<priority value="all" />
-		<appender-ref ref="console" />
-		<appender-ref ref="logfile" />
-		<appender-ref ref="file" />
-		<appender-ref ref="testng" />
-	</category>
-
+	
 	<root>
 		<priority value="warn" />
 	</root>
