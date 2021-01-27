@@ -10,4 +10,8 @@ public class PageGeneratorManager {
 	public static ManageHomePagePO getManageHomePage(WebDriver driver) {
 		return new ManageHomePagePO(driver);
 	}
+	
+	public static NewCustomerPO getNewCustomerPage(WebDriver driver) {
+		return new NewCustomerPO(driver);
+	}
 }
