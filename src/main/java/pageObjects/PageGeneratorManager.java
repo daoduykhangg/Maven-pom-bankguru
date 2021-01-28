@@ -11,7 +11,7 @@ public class PageGeneratorManager {
 		return new ManageHomePagePO(driver);
 	}
 	
-	public static NewCustomerPO getNewCustomerPage(WebDriver driver) {
-		return new NewCustomerPO(driver);
+	public static CustomerPO getNewCustomerPage(WebDriver driver) {
+		return new CustomerPO(driver);
 	}
 }
