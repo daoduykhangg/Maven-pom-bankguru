@@ -380,14 +380,14 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_26_Email_Must_Be_Incorrect_format() {
-		log.info("New customer [Email must be incorrect format] - Step 01: Refresh current page");
+	public void TC_26_Email_Must_Be_Correct_format() {
+		log.info("New customer [Email must be Correct format] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
-		log.info("New customer [Email must be incorrect format] - Step 02: Enter to 'Email' Textbox with value 'guru99@gmail'");
+		log.info("New customer [Email must be Correct format] - Step 02: Enter to 'Email' Textbox with value 'guru99@gmail'");
 		customerPage.enterToTextboxByName(driver, "guru99@gmail", "emailid");
 		
-		log.info("New customer [Email must be incorrect format] - Step 03: Verify Error message is displayed with value 'Email-ID is not valid'");
+		log.info("New customer [Email must be Correct format] - Step 03: Verify Error message is displayed with value 'Email-ID is not valid'");
 		verifyEquals(customerPage.getErrorMessageValueByID(driver, "9"), "Email-ID is not valid");
 	}
 	@Test

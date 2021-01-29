@@ -144,7 +144,7 @@ public class AbstractPage {
 			element.click();
 		}
 	}
-
+		
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {
 
 		element = getElement(driver, locator);
@@ -664,41 +664,48 @@ public class AbstractPage {
 		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, value, nameValue);
 	}
 	
+	
 	public void enterToTextareaByName(WebDriver driver, String value, String nameValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, nameValue);
 		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, value, nameValue);
 	}
+	
 
 	public void clickToButtonByValue(WebDriver driver, String value) {
 		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, value);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, value);
 	}
 	
+	
 	public void openToPageInListboxByName(WebDriver driver, String nameValue) {
 		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_PAGE_IN_LIST_BOX_BY_TEXT, nameValue);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_PAGE_IN_LIST_BOX_BY_TEXT, nameValue);
 	}
+	
 	
 	public void clickToTextboxByName(WebDriver driver, String nameValue) {
 		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, nameValue);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, nameValue);
 	}
 	
+	
 	public void clickToTextareaByName(WebDriver driver, String nameValue) {
 		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, nameValue);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, nameValue);
 	}
+	
 	
 	public String getErrorMessageValueByID(WebDriver driver, String idValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE_BY_ID, idValue);
 		return getTextElement(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE_BY_ID, idValue);
 	}
 	
+	
 	public boolean isFieldNameDisplayed(WebDriver driver, String fieldsname) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_FIELS_NAME_BY_TEXT, fieldsname);
 		return isElementDisplayed(driver, AbstractPageUI.DYNAMIC_FIELS_NAME_BY_TEXT, fieldsname);
 	}
-	
+		
 	private WebElement element;
 	private JavascriptExecutor jsExecutor;
 	private WebDriverWait explicitWait;
