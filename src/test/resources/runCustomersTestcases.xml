@@ -16,7 +16,7 @@
 	<test name="Run on CHROME UI">
 		<parameter name="browser" value="chrome_ui" />
 		<classes>
-			<class name="com.bankguru.customer.Customer_02_Edit_Customer" />
+			<class name="com.bankguru.customer.Customer_03_Delete_Customer" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

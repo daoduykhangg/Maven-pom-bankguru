@@ -64,7 +64,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		customerPage = PageGeneratorManager.getNewCustomerPage(driver);
 		
 		log.info("New customer [Name cannot be empty] - Step 02: Click to 'Customer Name' Textbox");
-		customerPage.clickToTextboxByName(driver, "name");
+		customerPage.enterToTextboxByName(driver, "", "name");
 		
 		log.info("New customer [Name cannot be empty] - Step 03: Enter to 'Customer Name' with value 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, Keys.TAB, "name");
@@ -115,7 +115,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		customerPage.refreshCurrentPage(driver);
 		
 		log.info("New customer [Address cannot be empty] - Step 02: Click to 'Address' Textbox");
-		customerPage.clickToTextareaByName(driver, "addr");
+		customerPage.enterToTextareaByName(driver, "", "addr");
 		
 		log.info("New customer [Address cannot be empty] - Step 03: Enter to 'Address' with value 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, Keys.TAB, "addr");
@@ -142,7 +142,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		customerPage.refreshCurrentPage(driver);
 		
 		log.info("New customer [City cannot be empty] - Step 02: Click to 'City' Textbox");
-		customerPage.clickToTextboxByName(driver, "city");
+		customerPage.enterToTextboxByName(driver, "", "city");
 		
 		log.info("New customer [City cannot be empty] - Step 03: Enter to 'City' with value 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, Keys.TAB, "city");
@@ -193,7 +193,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		customerPage.refreshCurrentPage(driver);
 		
 		log.info("New customer [State cannot be empty] - Step 02: Click to 'State' Textbox");
-		customerPage.clickToTextboxByName(driver, "state");
+		customerPage.enterToTextboxByName(driver, "", "state");
 		
 		log.info("New customer [State cannot be empty] - Step 03: Enter to 'State' with value 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, Keys.TAB, "state");
@@ -256,7 +256,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		customerPage.refreshCurrentPage(driver);
 		
 		log.info("New customer [PIN cannot be empty] - Step 02: Click to 'PIN' Textbox");
-		customerPage.clickToTextboxByName(driver, "pinno");
+		customerPage.enterToTextboxByName(driver, "", "pinno");
 		
 		log.info("New customer [PIN cannot be empty] - Step 03: Enter to 'PIN' with value 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, Keys.TAB, "pinno");
@@ -319,7 +319,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		customerPage.refreshCurrentPage(driver);
 		
 		log.info("New customer [Mobile Number cannot be empty] - Step 02: Click to 'Mobile Number' Textbox");
-		customerPage.clickToTextboxByName(driver, "telephoneno");
+		customerPage.enterToTextboxByName(driver, "", "telephoneno");
 		
 		log.info("New customer [Mobile Number cannot be empty] - Step 03: Enter to 'Mobile Number' with value 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, Keys.TAB, "telephoneno");
@@ -370,7 +370,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		customerPage.refreshCurrentPage(driver);
 		
 		log.info("New customer [Email cannot be empty] - Step 02: Click to 'Email' Textbox");
-		customerPage.clickToTextboxByName(driver, "emailid");
+		customerPage.enterToTextboxByName(driver, "", "emailid");
 		
 		log.info("New customer [Email cannot be empty] - Step 03: Enter to 'Email' with value 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, Keys.TAB, "emailid");

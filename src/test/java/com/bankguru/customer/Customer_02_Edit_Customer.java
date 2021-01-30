@@ -113,8 +113,8 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 
 	@Test
 	public void TC_01_Customer_ID_Can_Not_Be_Empty() {
-		log.info("Edit Customer [CustomerID can not be empty] - Step 01: Click to 'Customer ID' Textbox");
-		customerPage.clickToTextboxByName(driver, "cusid");
+		log.info("Edit Customer [CustomerID can not valuebe empty] - Step 01: Click to 'Customer ID' Textbox");
+		customerPage.enterToTextboxByName(driver, "", "cusid");
 
 		log.info("Edit Customer [CustomerID can not be empty] - Step 02: Enter to 'Customer ID' Textbox with 'TAB' key");
 		customerPage.sendKeyBoardToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, Keys.TAB, "cusid");
