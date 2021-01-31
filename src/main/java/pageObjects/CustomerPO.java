@@ -17,14 +17,8 @@ public class CustomerPO extends AbstractPage{
 		clickToElement(driver, CustomerPageUI.DYNAMIC_GENDER_RADIO_BUTTON, value);
 	}
 
-	public String getHeadingTextInTable() {
-		waitForElementVisible(driver, CustomerPageUI.HEADING_TEXT);
-		return getTextElement(driver, CustomerPageUI.HEADING_TEXT);
-	}
-
 	public String getCustomerIDValue() {
 		waitForElementVisible(driver, CustomerPageUI.CUSTOMER_ID_VALUE);
 		return getTextElement(driver, CustomerPageUI.CUSTOMER_ID_VALUE);
 	}
-
 }

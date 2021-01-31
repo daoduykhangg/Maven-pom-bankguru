@@ -103,7 +103,7 @@ public class Customer_03_Delete_Customer extends AbstractTest {
 		customerPage.clickToButtonByValue(driver, "Submit");
 
 		log.info("Pre-condition - Step 22: Verify Success Message is displayed with value 'Customer Registered Successfully!!!'");
-		verifyEquals(customerPage.getHeadingTextInTable(), "Customer Registered Successfully!!!");
+		verifyEquals(customerPage.getHeadingTextInTable(driver), "Customer Registered Successfully!!!");
 
 		log.info("Pre-condition - Step 23: Get Text 'Customer ID' in table");
 		customerID = customerPage.getCustomerIDValue();

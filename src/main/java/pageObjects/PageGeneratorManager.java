@@ -14,4 +14,8 @@ public class PageGeneratorManager {
 	public static CustomerPO getNewCustomerPage(WebDriver driver) {
 		return new CustomerPO(driver);
 	}
+	
+	public static AccountPO getAccountPage(WebDriver driver) {
+		return new AccountPO(driver);
+	}
 }

@@ -102,7 +102,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 		customerPage.clickToButtonByValue(driver, "Submit");
 
 		log.info("Pre-condition - Step 22: Verify Success Message is displayed with value 'Customer Registered Successfully!!!'");
-		verifyEquals(customerPage.getHeadingTextInTable(), "Customer Registered Successfully!!!");
+		verifyEquals(customerPage.getHeadingTextInTable(driver), "Customer Registered Successfully!!!");
 
 		log.info("Pre-condition - Step 23: Get Text 'Customer ID' in table");
 		customerID = customerPage.getCustomerIDValue();
@@ -159,7 +159,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 		customerPage.clickToButtonByValue(driver, "Submit");
 
 		log.info("Edit Customer [CustomerID can not have special character] - Step 04: Verify header 'Edit Customer' is displayed");
-		verifyEquals(customerPage.getHeadingTextInTable(), "Edit Customer");
+		verifyEquals(customerPage.getHeadingTextInTable(driver), "Edit Customer");
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")

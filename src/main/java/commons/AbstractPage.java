@@ -21,6 +21,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageUIs.AbstractPageUI;
+import pageUIs.CustomerPageUI;
 
 public class AbstractPage {
 	public void openPageUrl(WebDriver driver, String url) {
@@ -687,12 +688,16 @@ public class AbstractPage {
 		return getTextElement(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE_BY_ID, idValue);
 	}
 	
-	
 	public boolean isFieldNameDisplayed(WebDriver driver, String fieldsname) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_FIELS_NAME_BY_TEXT, fieldsname);
 		return isElementDisplayed(driver, AbstractPageUI.DYNAMIC_FIELS_NAME_BY_TEXT, fieldsname);
 	}
 		
+	public String getHeadingTextInTable(WebDriver driver) {
+		waitForElementVisible(driver, AbstractPageUI.HEADING_TEXT);
+		return getTextElement(driver, AbstractPageUI.HEADING_TEXT);
+	}
+	
 	private WebElement element;
 	private JavascriptExecutor jsExecutor;
 	private WebDriverWait explicitWait;
