@@ -113,7 +113,7 @@ public class Customer_03_Delete_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_01_Customer_ID_Can_Not_Be_Empty() {
+	public void TC_01_Delete_Customer_With_Customer_ID_Can_Not_Be_Empty() {
 		log.info("Delete Customer [CustomerID can not be empty] - Step 01: Click to 'Customer ID' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "cusid");
 		
@@ -125,7 +125,7 @@ public class Customer_03_Delete_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_02_Customer_ID_Must_Be_Numberic() {
+	public void TC_02_Delete_Customer_With_Customer_ID_Must_Be_Numberic() {
 		log.info("Delete Customer [CustomerID must be numberic] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -137,7 +137,7 @@ public class Customer_03_Delete_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_03_Customer_ID_Can_Not_Have_Special_Character() {
+	public void TC_03_Delete_Customer_With_Customer_ID_Can_Not_Have_Special_Character() {
 		log.info("Delete Customer [CustomerID can not have special character] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -149,7 +149,7 @@ public class Customer_03_Delete_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_04_Customer_ID_Can_Not_Have_Blank_Space() {
+	public void TC_04_Delete_Customer_With_Customer_ID_Can_Not_Have_Blank_Space() {
 		log.info("Delete Customer [CustomerID can not have blank space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -161,7 +161,7 @@ public class Customer_03_Delete_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_05_Customer_ID_First_Character_Can_Not_Be_Space() {
+	public void TC_05_Delete_Customer_With_Customer_ID_First_Character_Can_Not_Be_Space() {
 		log.info("Delete Customer [CustomerID First character can not be space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		

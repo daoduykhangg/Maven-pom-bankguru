@@ -16,7 +16,7 @@
 	<test name="Run on CHROME UI">
 		<parameter name="browser" value="chrome_ui" />
 		<classes>
-			<class name="com.bankguru.customer.Customer_05_Edit_Account" />
+			<class name="com.bankguru.customer.Customer_07_Mini_Statement" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

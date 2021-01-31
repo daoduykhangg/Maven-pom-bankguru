@@ -58,7 +58,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_01_Name_Can_Not_Be_Empty() {
+	public void TC_01_New_Customer_With_Name_Can_Not_Be_Empty() {
 		log.info("New customer [Name cannot be empty] - Step 01: Click to 'New Customer' Link");
 		manageHomePage.openToPageInListboxByName(driver, "New Customer");
 		customerPage = PageGeneratorManager.getNewCustomerPage(driver);
@@ -74,7 +74,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_02_Name_Can_Not_Be_Numberic() {
+	public void TC_02_New_Customer_With_Name_Can_Not_Be_Numberic() {
 		log.info("New customer [Name cannot be numberic] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -86,7 +86,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_03_Name_Can_Not_Have_Special_Characters() {
+	public void TC_03_New_Customer_With_Name_Can_Not_Have_Special_Characters() {
 		log.info("New customer [Name cannot have special characters] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -98,7 +98,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_04_Name_Can_Not_Have_First_Characters_As_Blank_Space() {
+	public void TC_04_New_Customer_With_Name_Can_Not_Have_First_Characters_As_Blank_Space() {
 		log.info("New customer [Name cannot have first characters as blank space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -110,7 +110,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_05_Address_Can_Not_Be_Empty() {
+	public void TC_05_New_Customer_With_Address_Can_Not_Be_Empty() {
 		log.info("New customer [Address cannot be empty] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -125,7 +125,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_06_Address_Can_Not_Have_First_Characters_As_Blank_Space() {
+	public void TC_06_New_Customer_With_Address_Can_Not_Have_First_Characters_As_Blank_Space() {
 		log.info("New customer [Address cannot have first characters as blank space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -137,7 +137,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_07_City_Can_Not_Be_Empty() {
+	public void TC_07_New_Customer_With_City_Can_Not_Be_Empty() {
 		log.info("New customer [City cannot be empty] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -152,7 +152,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_08_City_Can_Not_Be_Numberic() {
+	public void TC_08_New_Customer_With_City_Can_Not_Be_Numberic() {
 		log.info("New customer [City cannot be numberic] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -164,7 +164,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_09_City_Can_Not_Have_Special_Characters() {
+	public void TC_09_New_Customer_With_City_Can_Not_Have_Special_Characters() {
 		log.info("New customer [City cannot have special characters] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -176,7 +176,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_10_City_Can_Not_Have_First_Characters_As_Blank_Space() {
+	public void TC_10_New_Customer_With_City_Can_Not_Have_First_Characters_As_Blank_Space() {
 		log.info("New customer [City cannot have first characters as blank space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -188,7 +188,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_11_State_Can_Not_Be_Empty() {
+	public void TC_11_New_Customer_With_State_Can_Not_Be_Empty() {
 		log.info("New customer [State cannot be empty] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -203,7 +203,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_12_State_Can_Not_Be_Numberic() {
+	public void TC_12_New_Customer_With_State_Can_Not_Be_Numberic() {
 		log.info("New customer [State cannot be numberic] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -215,7 +215,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_13_State_Can_Not_Have_Special_Characters() {
+	public void TC_13_New_Customer_With_State_Can_Not_Have_Special_Characters() {
 		log.info("New customer [State cannot have special characters] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -227,7 +227,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_14_State_Can_Not_Have_First_Characters_As_Blank_Space() {
+	public void TC_14_New_Customer_With_State_Can_Not_Have_First_Characters_As_Blank_Space() {
 		log.info("New customer [State cannot have first characters as blank space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -239,7 +239,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_15_PIN_must_be_numberic() {
+	public void TC_15_New_Customer_With_PIN_must_be_numberic() {
 		log.info("New customer [PIN must be numberic] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -251,7 +251,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_16_PIN_Can_Not_Be_Empty() {
+	public void TC_16_New_Customer_With_PIN_Can_Not_Be_Empty() {
 		log.info("New customer [PIN cannot be empty] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -266,7 +266,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_17_PIN_Must_Have_6_Digits() {
+	public void TC_17_New_Customer_With_PIN_Must_Have_6_Digits() {
 		log.info("New customer [PIN must have 6 digits] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -278,7 +278,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_18_PIN_Can_Not_Have_Special_Characters() {
+	public void TC_18_New_Customer_With_PIN_Can_Not_Have_Special_Characters() {
 		log.info("New customer [PIN cannot have special characters] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -290,7 +290,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_19_PIN_Can_Not_Have_First_Characters_As_Blank_Space() {
+	public void TC_19_New_Customer_With_PIN_Can_Not_Have_First_Characters_As_Blank_Space() {
 		log.info("New customer [PIN cannot have first characters as blank space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -302,7 +302,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_20_PIN_Can_Not_Have_Space() {
+	public void TC_20_New_Customer_With_PIN_Can_Not_Have_Space() {
 		log.info("New customer [PIN cannot have space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -314,7 +314,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 
 	@Test
-	public void TC_21_Mobile_Number_Can_Not_Be_Empty() {
+	public void TC_21_New_Customer_With_Mobile_Number_Can_Not_Be_Empty() {
 		log.info("New customer [Mobile Number cannot be empty] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -329,7 +329,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_22_Mobile_Number_Can_Not_Have_First_Characters_As_Blank_Space() {
+	public void TC_22_New_Customer_With_Mobile_Number_Can_Not_Have_First_Characters_As_Blank_Space() {
 		log.info("New customer [Mobile Number cannot have first characters as blank space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -341,7 +341,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_23_Mobile_Number_Can_Not_Have_Space() {
+	public void TC_23_New_Customer_With_Mobile_Number_Can_Not_Have_Space() {
 		log.info("New customer [Mobile Number cannot have space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -353,7 +353,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_24_Mobile_Number_Can_Not_Special_Characters() {
+	public void TC_24_New_Customer_With_Mobile_Number_Can_Not_Special_Characters() {
 		log.info("New customer [Mobile Number cannot have special characters] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -365,7 +365,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_25_Email_Can_Not_Be_Empty() {
+	public void TC_25_New_Customer_With_Email_Can_Not_Be_Empty() {
 		log.info("New customer [Email cannot be empty] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -380,7 +380,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_26_Email_Must_Be_Correct_format() {
+	public void TC_26_New_Customer_With_Email_Must_Be_Correct_format() {
 		log.info("New customer [Email must be Correct format] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -391,7 +391,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 		verifyEquals(customerPage.getErrorMessageValueByID(driver, "9"), "Email-ID is not valid");
 	}
 	@Test
-	public void TC_27_Email_Can_Not_Have_Space() {
+	public void TC_27_New_Customer_With_Email_Can_Not_Have_Space() {
 		log.info("New customer [Email cannot have space] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		
@@ -403,7 +403,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	}
 	
 	@Test
-	public void TC_28_Check_All_Fields_Name_Are_As_Requirement() {
+	public void TC_28_New_Customer_With_Check_All_Fields_Name_Are_As_Requirement() {
 		log.info("New customer [Check all fields name] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 		

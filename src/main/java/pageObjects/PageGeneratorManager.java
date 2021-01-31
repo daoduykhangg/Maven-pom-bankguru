@@ -18,4 +18,8 @@ public class PageGeneratorManager {
 	public static AccountPO getAccountPage(WebDriver driver) {
 		return new AccountPO(driver);
 	}
+	
+	public static MiniStatementPO getMiniStatementPage(WebDriver driver) {
+		return new MiniStatementPO(driver);
+	}
 }

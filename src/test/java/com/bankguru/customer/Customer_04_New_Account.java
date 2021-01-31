@@ -62,7 +62,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_01_CustomerID_Can_Not_Be_Empty() {
+	public void TC_01_New_Account_With_CustomerID_Can_Not_Be_Empty() {
 		log.info("New Account [CustomerID can not be empty] - Step 01: Enter to 'Customer id' Textbox with empty value");
 		accountPage.enterToTextboxByName(driver, "", "cusid");
 
@@ -74,7 +74,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_02_CustomerID_Must_Be_Numberic() {
+	public void TC_02_New_Account_With_CustomerID_Must_Be_Numberic() {
 		log.info("New Account [CustomerID must be numberic] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 
@@ -86,7 +86,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_03_CustomerID_Can_Not_Have_Special_Character() {
+	public void TC_03_New_Account_With_CustomerID_Can_Not_Have_Special_Character() {
 		log.info("New Account [CustomerID can not have special character] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 
@@ -98,7 +98,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_04_CustomerID_Can_Not_Have_Blank_Space() {
+	public void TC_04_New_Account_With_CustomerID_Can_Not_Have_Blank_Space() {
 		log.info("New Account [CustomerID can not have blank space] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 
@@ -110,7 +110,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_05_CustomerID_First_Character_Can_Not_Be_Space() {
+	public void TC_05_New_Account_With_CustomerID_First_Character_Can_Not_Be_Space() {
 		log.info("New Account [CustomerID First character can not be space] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 
@@ -121,7 +121,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_06_Initial_Deposit_Can_Not_Be_Empty() {
+	public void TC_06_New_Account_With_Initial_Deposit_Can_Not_Be_Empty() {
 		log.info("New Account [Initial Deposit can not be empty] - Step 01: Enter to 'Initial Deposit' Textbox with empty value");
 		accountPage.enterToTextboxByName(driver, "", "inideposit");
 
@@ -133,7 +133,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_07_Initial_Deposit_Must_Be_Numberic() {
+	public void TC_07_New_Account_With_Initial_Deposit_Must_Be_Numberic() {
 		log.info("New Account [Initial Deposit must be numberic] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 
@@ -145,7 +145,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_08_Initial_Deposit_Can_Not_Have_Special_Character() {
+	public void TC_08_New_Account_With_Initial_Deposit_Can_Not_Have_Special_Character() {
 		log.info("New Account [Initial Deposit can not have special character] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 
@@ -157,7 +157,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_09_Initial_Deposit_Can_Not_Have_Blank_Space() {
+	public void TC_09_New_Account_With_Initial_Deposit_Can_Not_Have_Blank_Space() {
 		log.info("New Account [Initial Deposit can not have blank space] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 
@@ -169,7 +169,7 @@ public class Customer_04_New_Account extends AbstractTest {
 	}
 
 	@Test
-	public void TC_10_Initial_Deposit_First_Character_Can_Not_Be_Space() {
+	public void TC_10_New_Account_With_Initial_Deposit_First_Character_Can_Not_Be_Space() {
 		log.info("New Account [Initial Deposit First character can not be space] - Step 01: Refresh current page");
 		accountPage.refreshCurrentPage(driver);
 

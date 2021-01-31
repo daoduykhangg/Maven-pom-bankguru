@@ -16,8 +16,9 @@ import pageObjects.RegisterPO;
 import pageUIs.AbstractPageUI;
 import utilities.FakerConfig;
 
-public class Customer_05_Edit_Account extends AbstractTest {
-	@Parameters({ "browser", "url" })
+public class Customer_06_Delete_Account extends AbstractTest{
+
+	@Parameters({"browser", "url"})
 	@BeforeClass
 	public void beforeClass(String browserName, String url) {
 		driver = getBrowserDriver(browserName, url);
@@ -128,12 +129,13 @@ public class Customer_05_Edit_Account extends AbstractTest {
 		log.info("Pre-condition - Step 29: Get Text 'Account ID' in table");
 		accountID = accountPage.getAccountIDValueInTable();
 		
-		log.info("Pre-condition - Step 30: Click to 'Edit Account' Link");
-		accountPage.openToPageInListboxByName(driver, "Edit Account");
+		log.info("Pre-condition - Step 30: Click to 'Delete Account' Link");
+		accountPage.openToPageInListboxByName(driver, "Delete Account");
+		
 	}
 	
 	@Test
-	public void TC_01_Edit_Account_With_Account_Number_Can_Not_Be_Empty() {
+	public void TC_01_Delete_Account_With_Account_Number_Can_Not_Be_Empty() {
 		log.info("Edit Account [Account Number can not be empty] - Step 01: Enter to 'Account No' with empty value");
 		accountPage.enterToTextboxByName(driver, "", "accountno");
 		
@@ -145,72 +147,91 @@ public class Customer_05_Edit_Account extends AbstractTest {
 	}
 	
 	@Test
-	public void TC_02_Edit_Account_With_Account_Number_Must_Be_Numberic() {		
-		log.info("Edit Account [Account Number must be numberic] - Step 01: Refresh current Page");
+	public void TC_02_Delete_Account_With_Account_Number_Must_Be_Numberic() {		
+		log.info("Delete Account [Account Number must be numberic] - Step 01: Refresh current Page");
 		accountPage.refreshCurrentPage(driver);
 		
-		log.info("Edit Account [Account Number must be numberic] - Step 02: Enter to 'Account No' with value 'abc123'");
+		log.info("Delete Account [Account Number must be numberic] - Step 02: Enter to 'Account No' with value 'abc123'");
 		accountPage.enterToTextboxByName(driver, "abc123", "accountno");
 		
-		log.info("Edit Account [Account Number must be numberic] - Step 03: Verify Error Message is displayed with value 'Characters are not allowed'");
+		log.info("Delete Account [Account Number must be numberic] - Step 03: Verify Error Message is displayed with value 'Characters are not allowed'");
 		verifyEquals(accountPage.getErrorMessageValueByID(driver, "2"), "Characters are not allowed");
 	}
 	
 	@Test
-	public void TC_03_Edit_Account_With_Account_Number_Can_Not_Have_Special_Character() {
-		log.info("Edit Account [Account Number can not have special character] - Step 01: Refresh current Page");
+	public void TC_03_Delete_Account_With_Account_Number_Can_Not_Have_Special_Character() {
+		log.info("Delete Account [Account Number can not have special character] - Step 01: Refresh current Page");
 		accountPage.refreshCurrentPage(driver);
 		
-		log.info("Edit Account [Account Number can not have special character] - Step 02: Enter to 'Account No' with value '!@#123'");
+		log.info("Delete Account [Account Number can not have special character] - Step 02: Enter to 'Account No' with value '!@#123'");
 		accountPage.enterToTextboxByName(driver, "@#123", "accountno");
 		
-		log.info("Edit Account [Account Number can not have special character] - Step 03: Verify Error Message is displayed with value 'Special characters are not allowed'");
+		log.info("Delete Account [Account Number can not have special character] - Step 03: Verify Error Message is displayed with value 'Special characters are not allowed'");
 		verifyEquals(accountPage.getErrorMessageValueByID(driver, "2"), "Special characters are not allowed");
 	}
 	
 	@Test
-	public void TC_04_Edit_Account_With_Account_Number_Can_Not_Have_Blank_Space() {
-		log.info("Edit Account [Account Number can not have blank space] - Step 01: Refresh current Page");
+	public void TC_04_Delete_Account_With_Account_Number_Can_Not_Have_Blank_Space() {
+		log.info("Delete Account [Account Number can not have blank space] - Step 01: Refresh current Page");
 		accountPage.refreshCurrentPage(driver);
 		
-		log.info("Edit Account [Account Number can not have blank space] - Step 02: Enter to 'Account No' with value '12 123'");
+		log.info("Delete Account [Account Number can not have blank space] - Step 02: Enter to 'Account No' with value '12 123'");
 		accountPage.enterToTextboxByName(driver, "12 123", "accountno");
 		
-		log.info("Edit Account [Account Number can not have blank space] - Step 03: Verify Error Message is displayed with value 'Characters are not allowed'");
+		log.info("Delete Account [Account Number can not have blank space] - Step 03: Verify Error Message is displayed with value 'Characters are not allowed'");
 		verifyEquals(accountPage.getErrorMessageValueByID(driver, "2"), "Characters are not allowed");
 	}
 	
 	@Test
-	public void TC_05_Edit_Account_With_Account_Number_First_Character_Can_Not_Be_Space() {
-		log.info("Edit Account [Account Number first character can not be space] - Step 01: Refresh current Page");
+	public void TC_05_Delete_Account_With_Account_Number_First_Character_Can_Not_Be_Space() {
+		log.info("Delete Account [Account Number first character can not be space] - Step 01: Refresh current Page");
 		accountPage.refreshCurrentPage(driver);
 		
-		log.info("Edit Account [Account Number first character can not be space] - Step 02: Enter to 'Account No' with value ' '");
+		log.info("Delete Account [Account Number first character can not be space] - Step 02: Enter to 'Account No' with value ' '");
 		accountPage.enterToTextboxByName(driver, " ", "accountno");
 		
-		log.info("Edit Account [Account Number first character can not be space] - Step 03: Verify Error Message is displayed with value 'Characters are not allowed'");
+		log.info("Delete Account [Account Number first character can not be space] - Step 03: Verify Error Message is displayed with value 'Characters are not allowed'");
 		verifyEquals(accountPage.getErrorMessageValueByID(driver, "2"), "Characters are not allowed");
 	}
-	
+
 	@Test
-	public void TC_06_Edit_Account_With_Valid_Account_Number() {
-		log.info("Edit Account [Valid Account Number] - Step 01: Refresh current Page");
+	public void TC_06_Delete_Account_With_Valid_Account_Number() {
+		log.info("Delete Account [Valid Account Number] - Step 01: Refresh current Page");
 		accountPage.refreshCurrentPage(driver);
 		
-		log.info("Edit Account [Valid Account Number] - Step 02: Enter to 'Account No' with valid value '" + accountID + "'");
+		log.info("Delete Account [Valid Account Number] - Step 02: Enter to 'Account No' with value '" + accountID + "'");
 		accountPage.enterToTextboxByName(driver, accountID, "accountno");
 		
-		log.info("Edit Account [Valid Account Number] - Step 03: click to 'Submit' Button");
+		log.info("Delete Account [Valid Account Number] - Step 03: Click to 'Submit' Button");
 		accountPage.clickToButtonByValue(driver, "Submit");
 		
-		log.info("Edit Account [Valid Account Number] - Step 04: Verify Heading is displayed in table with value 'Edit Account Entry Form'");
-		verifyEquals(accountPage.getHeadingTextInTable(driver), "Edit Account Entry Form");
+		log.info("Delete Account [Valid Account Number] - Step 04: Accept alert 'Do you really want to delete this Account?'");
+		accountPage.acceptAlert(driver);
 		
-		log.info("Edit Account [Valid Account Number] - Step 05: Verify Information Account is displayed correctly");
-		verifyEquals(accountPage.getCustomerIDValue(), customerID);
-		verifyEquals(accountPage.getBalanceValue(), initialDeposit);		
+		log.info("Delete Account [Valid Account Number] - Step 05: Accept alert 'Account Deleted Sucessfully'");
+		accountPage.acceptAlert(driver);
+		manageHomePage = PageGeneratorManager.getManageHomePage(driver);
+		
+		log.info("Delete Account [Valid Account Number] - Step 06: Click to 'Delete Account'");
+		accountPage.openToPageInListboxByName(driver, "Delete Account");
+		
+		log.info("Delete Account [Valid Account Number] - Step 07: Enter to 'Account No' with value '" + accountID + "'");
+		accountPage.enterToTextboxByName(driver, accountID, "accountno");
+		
+		log.info("Delete Account [Valid Account Number] - Step 08: Click to 'Submit' Button");
+		accountPage.clickToButtonByValue(driver, "Submit");
+		
+		log.info("Delete Account [Valid Account Number] - Step 09: Accept alert 'Do you really want to delete this Account?'");
+		accountPage.acceptAlert(driver);
+		
+		log.info("Delete Account [Valid Account Number] - Step 10: Verify Accept alert 'Account does not exist' is displayed");
+		verifyEquals(accountPage.getTextAlert(driver), "Account does not exist");
+	
+		log.info("Delete Account [Valid Account Number] - Step 11: Accept alert 'Account does not exist'");
+		accountPage.acceptAlert(driver);
+		
 	}
-
+	
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {
 		closeBrowserAndDriver(driver);

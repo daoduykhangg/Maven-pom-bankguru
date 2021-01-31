@@ -112,7 +112,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_01_Customer_ID_Can_Not_Be_Empty() {
+	public void TC_01_Edit_Customer_With_Customer_ID_Can_Not_Be_Empty() {
 		log.info("Edit Customer [CustomerID can not valuebe empty] - Step 01: Click to 'Customer ID' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "cusid");
 
@@ -124,7 +124,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_02_Customer_ID_Must_Be_Numberic() {
+	public void TC_02_Edit_Customer_Customer_ID_Must_Be_Numberic() {
 		log.info("Edit Customer [CustomerID must be numberic] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 
@@ -136,7 +136,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_03_Customer_ID_Can_Not_Have_special_character() {
+	public void TC_03_Edit_Customer_Customer_ID_Can_Not_Have_special_character() {
 		log.info("Edit Customer [CustomerID can not have special character] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 
@@ -148,7 +148,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test
-	public void TC_04_Valid_Customer_ID() {
+	public void TC_04_Edit_Customer_Valid_Customer_ID() {
 		log.info("Edit Customer [CustomerID can not have special character] - Step 01: Refresh current page");
 		customerPage.refreshCurrentPage(driver);
 
@@ -163,7 +163,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_05_Address_Can_Not_Be_Empty() {
+	public void TC_05_Edit_Customer_Address_Can_Not_Be_Empty() {
 		log.info("Edit Customer [Address can not be empty] - Step 01: enter to 'Address' Textbox");
 		customerPage.enterToTextareaByName(driver, "", "addr");
 
@@ -175,7 +175,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_06_City_Can_Not_Be_Empty() {
+	public void TC_06_Edit_Customer_City_Can_Not_Be_Empty() {
 		log.info("Edit Customer [City can not be empty] - Step 01: Enter to 'City' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "city");
 
@@ -187,7 +187,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_07_City_Can_Not_Be_Numberic() {
+	public void TC_07_Edit_Customer_City_Can_Not_Be_Numberic() {
 		log.info("Edit Customer [City can not be numberic] - Step 01: Enter to 'City' Textbox with value 'city123'");
 		customerPage.enterToTextboxByName(driver, "city123", "city");
 
@@ -196,7 +196,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_08_City_Can_Not_Have_Special_Character() {
+	public void TC_08_Edit_Customer_City_Can_Not_Have_Special_Character() {
 		log.info("Edit Customer [City can not have special character] - Step 01: Enter to 'City' Textbox with value 'city!@#'");
 		customerPage.enterToTextboxByName(driver, "city!@#", "city");
 
@@ -205,7 +205,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_09_State_Can_Not_Be_Empty() {
+	public void TC_09_Edit_Customer_State_Can_Not_Be_Empty() {
 		log.info("Edit Customer [State can not be empty] - Step 01: Enter to 'State' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "state");
 
@@ -217,7 +217,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_10_State_Can_Not_Be_Numberic() {
+	public void TC_10_Edit_Customer_State_Can_Not_Be_Numberic() {
 		log.info("Edit Customer [State can not be numberic] - Step 01: Enter to 'State' Textbox with value 'state123'");
 		customerPage.enterToTextboxByName(driver, "state123", "state");
 
@@ -226,7 +226,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_11_State_Can_Not_Have_Special_Character() {
+	public void TC_11_Edit_Customer_State_Can_Not_Have_Special_Character() {
 		log.info("Edit Customer [State can not have special character] - Step 01: Enter to 'State' Textbox with value 'state!@#'");
 		customerPage.enterToTextboxByName(driver, "state!@#", "state");
 
@@ -235,7 +235,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_12_PIN_Must_Be_Numberic() {
+	public void TC_12_Edit_Customer_PIN_Must_Be_Numberic() {
 		log.info("Edit Customer [PIN must be numberic] - Step 01: Enter to 'PIN' Textbox with value 'PIN123'");
 		customerPage.enterToTextboxByName(driver, "PIN123", "pinno");
 
@@ -244,7 +244,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_13_PIN_Can_Not_Be_Empty() {
+	public void TC_13_Edit_Customer_PIN_Can_Not_Be_Empty() {
 		log.info("Edit Customer [PIN can not be empty] - Step 01: Enter to 'PIN' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "pinno");
 
@@ -256,7 +256,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_14_PIN_Must_Have_6_digits() {
+	public void TC_14_Edit_Customer_PIN_Must_Have_6_digits() {
 		log.info("Edit Customer [PIN must have 6 digits] - Step 01: Enter to 'PIN' Textbox more than 6 digits with value '123456'");
 		customerPage.enterToTextboxByName(driver, "123456", "pinno");
 		
@@ -268,7 +268,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_15_PIN_Can_Not_Have_Special_Character() {
+	public void TC_15_Edit_Customer_PIN_Can_Not_Have_Special_Character() {
 		log.info("Edit Customer [PIN can not have special character] - Step 01: Enter to 'PIN' Textbox with value '123!@#'");
 		customerPage.enterToTextboxByName(driver, "123!@#", "pinno");
 
@@ -277,7 +277,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_16_Mobile_Number_Can_Not_Be_Empty() {
+	public void TC_16_Edit_Customer_Mobile_Number_Can_Not_Be_Empty() {
 		log.info("Edit Customer [Mobile Number can not be empty] - Step 01: Enter to 'Mobile Number' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "telephoneno");
 
@@ -289,7 +289,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_17_Mobile_Number_Can_Not_Have_Special_Character() {
+	public void TC_17_Edit_Customer_Mobile_Number_Can_Not_Have_Special_Character() {
 		log.info("Edit Customer [Mobile Number can not have special character] - Step 01: Enter to 'Mobile Number' Textbox with value '0938!@#123'");
 		customerPage.enterToTextboxByName(driver, "0938!@#123", "telephoneno");
 
@@ -298,7 +298,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_18_Email_Can_Not_Be_Empty() {
+	public void TC_18_Edit_Customer_Email_Can_Not_Be_Empty() {
 		log.info("Edit Customer [Email Number can not be empty] - Step 01: Enter to 'E-mail' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "emailid");
 
@@ -310,7 +310,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 	}
 
 	@Test(dependsOnMethods = "TC_04_Valid_Customer_ID")
-	public void TC_19_Email_Must_Be_Correct_format() {
+	public void TC_19_Edit_Customer_Email_Must_Be_Correct_format() {
 		log.info("Edit Customer [Email must be correct] - Step 02: Enter to 'E-mail' Textbox");
 		customerPage.enterToTextboxByName(driver, "guru99@gmail", "emailid");
 

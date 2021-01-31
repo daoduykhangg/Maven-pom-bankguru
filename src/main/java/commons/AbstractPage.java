@@ -56,8 +56,8 @@ public class AbstractPage {
 		driver.switchTo().alert().dismiss();
 	}
 
-	public void getTextAlert(WebDriver driver) {
-		driver.switchTo().alert().getText();
+	public String getTextAlert(WebDriver driver) {
+		return driver.switchTo().alert().getText();
 	}
 
 	public void setTextAlert(WebDriver driver, String value) {
