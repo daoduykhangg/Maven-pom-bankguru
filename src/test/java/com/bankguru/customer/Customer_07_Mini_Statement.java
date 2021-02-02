@@ -56,7 +56,7 @@ public class Customer_07_Mini_Statement extends AbstractTest {
 		log.info("Pre-condition - Step 09: Click to 'LOGIN' Button");
 		registerPage.clickToButtonByValue(driver, "LOGIN");
 		manageHomePage = PageGeneratorManager.getManageHomePage(driver);
-		manageHomePage.sleepInSecond(15);
+		
 		log.info("Pre-condition - Step 010: Click to 'Mini Statement' Link");
 		manageHomePage.openToPageInListboxByName(driver, "Mini Statement");
 		miniStatementPage = PageGeneratorManager.getMiniStatementPage(driver);

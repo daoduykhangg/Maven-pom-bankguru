@@ -51,7 +51,7 @@ public class AbstractTest {
 			driver = new FirefoxDriver();
 		} else if (browser==Browser.CHROME_UI) {
 			WebDriverManager.chromedriver().setup();
-//			File file = new File(GlobalConstants.BROWSER_EXTENSION_FOLDER + "extension_2_0_9_0.crx");
+			File file = new File(GlobalConstants.BROWSER_EXTENSION_FOLDER + "extension_2_0_9_0.crx");
 			ChromeOptions options = new ChromeOptions();
 //			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 //			options.addArguments("--lang=vi");
@@ -63,7 +63,7 @@ public class AbstractTest {
 			options.addArguments("--disable-geolocation");
 			options.setExperimentalOption("useAutomationExtension", false);
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-//			options.addExtensions(file);
+			options.addExtensions(file);
 //			chromePrefs.put("profile.default_content_settings.popups", 0);
 //			chromePrefs.put("download.default_directory", GlobalConstants.DOWNLOAD_FOLDER);
 //			options.setExperimentalOption("prefs", chromePrefs);
@@ -124,7 +124,7 @@ public class AbstractTest {
 			driver = new FirefoxDriver();
 		} else if (browser==Browser.CHROME_UI) {
 			WebDriverManager.chromedriver().setup();
-//			File file = new File(GlobalConstants.BROWSER_EXTENSION_FOLDER + "extension_2_0_9_0.crx");
+			File file = new File(GlobalConstants.BROWSER_EXTENSION_FOLDER + "extension_4_27_0_0.crx");
 			ChromeOptions options = new ChromeOptions();
 //			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
 //			options.addArguments("--lang=vi");
@@ -136,7 +136,7 @@ public class AbstractTest {
 			options.addArguments("--disable-geolocation");
 			options.setExperimentalOption("useAutomationExtension", false);
 			options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-//			options.addExtensions(file);
+			options.addExtensions(file);
 //			chromePrefs.put("profile.default_content_settings.popups", 0);
 //			chromePrefs.put("download.default_directory", GlobalConstants.DOWNLOAD_FOLDER);
 //			options.setExperimentalOption("prefs", chromePrefs);
