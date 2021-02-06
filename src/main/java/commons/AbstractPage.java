@@ -145,7 +145,7 @@ public class AbstractPage {
 			element.click();
 		}
 	}
-		
+
 	public void sendkeyToElement(WebDriver driver, String locator, String value) {
 
 		element = getElement(driver, locator);
@@ -369,7 +369,7 @@ public class AbstractPage {
 		action = new Actions(driver);
 		action.dragAndDrop(getElement(driver, sourceLocator), getElement(driver, targetLocator)).perform();
 	}
-	
+
 	public void sendKeyBoardToElement(WebDriver driver, String locator, Keys key) {
 		action = new Actions(driver);
 		action.sendKeys(getElement(driver, locator), key).perform();
@@ -659,45 +659,42 @@ public class AbstractPage {
 		return sortList.equals(arrayList);
 	}
 
-	/* Commons*/
+	/* Commons */
 	public void enterToTextboxByName(WebDriver driver, String value, String nameValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, nameValue);
 		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTBOX_BY_NAME, value, nameValue);
 	}
-	
-	
+
 	public void enterToTextareaByName(WebDriver driver, String value, String nameValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, nameValue);
 		sendkeyToElement(driver, AbstractPageUI.DYNAMIC_TEXTAREA_BY_NAME, value, nameValue);
 	}
-	
 
 	public void clickToButtonByValue(WebDriver driver, String value) {
 		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, value);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_BUTTON_BY_VALUE, value);
 	}
-	
-	
+
 	public void openToPageInListboxByName(WebDriver driver, String nameValue) {
 		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_PAGE_IN_LIST_BOX_BY_TEXT, nameValue);
 		clickToElement(driver, AbstractPageUI.DYNAMIC_PAGE_IN_LIST_BOX_BY_TEXT, nameValue);
 	}
-		
+
 	public String getErrorMessageValueByID(WebDriver driver, String idValue) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE_BY_ID, idValue);
 		return getTextElement(driver, AbstractPageUI.DYNAMIC_ERROR_MESSAGE_BY_ID, idValue);
 	}
-	
+
 	public boolean isFieldNameDisplayed(WebDriver driver, String fieldsname) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_FIELS_NAME_BY_TEXT, fieldsname);
 		return isElementDisplayed(driver, AbstractPageUI.DYNAMIC_FIELS_NAME_BY_TEXT, fieldsname);
 	}
-		
+
 	public String getHeadingTextInTable(WebDriver driver) {
 		waitForElementVisible(driver, AbstractPageUI.HEADING_TEXT);
 		return getTextElement(driver, AbstractPageUI.HEADING_TEXT);
 	}
-	
+
 	private WebElement element;
 	private JavascriptExecutor jsExecutor;
 	private WebDriverWait explicitWait;
