@@ -9,4 +9,5 @@ public class AbstractPageUI {
 	public static final String DYNAMIC_ERROR_MESSAGE_BY_ID = "//label[@id='message%s']";
 	public static final String DYNAMIC_FIELS_NAME_BY_TEXT = "//td[text()='%s']";
 	public static final String HEADING_TEXT = "//p[@class='heading3']";
+	public static final String DYNAMIC_CUSTOMER_INFO_BY_FIELDNAME = "//td[text()='%s']/following-sibling::td";
 }

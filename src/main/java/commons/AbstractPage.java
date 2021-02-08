@@ -695,6 +695,11 @@ public class AbstractPage {
 		return getTextElement(driver, AbstractPageUI.HEADING_TEXT);
 	}
 
+	public String getCustomerInfoValueByFieldname(WebDriver driver, String fieldName) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_FIELDNAME, fieldName);
+		return getTextElement(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_FIELDNAME, fieldName);
+	}
+	
 	private WebElement element;
 	private JavascriptExecutor jsExecutor;
 	private WebDriverWait explicitWait;
