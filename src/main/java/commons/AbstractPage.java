@@ -695,9 +695,14 @@ public class AbstractPage {
 		return getTextElement(driver, AbstractPageUI.HEADING_TEXT);
 	}
 
-	public String getCustomerInfoValueByFieldname(WebDriver driver, String fieldName) {
-		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_FIELDNAME, fieldName);
-		return getTextElement(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_FIELDNAME, fieldName);
+	public String getCustomerInfoValueByRowname(WebDriver driver, String rowName) {
+		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_ROWNAME, rowName);
+		return getTextElement(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_ROWNAME, rowName);
+	}
+	
+	public void SelectDropdownListByName(WebDriver driver, String itemValue, String nameValue) {
+		waitForElementClickable(driver, AbstractPageUI.DYNAMIC_DROPDOWN_LIST_BY_NAME, nameValue);
+		selectItemInDropdown(driver, AbstractPageUI.DYNAMIC_DROPDOWN_LIST_BY_NAME, itemValue, nameValue);
 	}
 	
 	private WebElement element;

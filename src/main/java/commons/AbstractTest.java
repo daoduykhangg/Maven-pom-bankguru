@@ -254,6 +254,9 @@ public class AbstractTest {
 	protected String getCurrentMonth() {
 		DateTime nowUTC = new DateTime(DateTimeZone.UTC);
 		int month = nowUTC.getMonthOfYear();
+		if(month < 10) {
+			return "0" + month;
+		}
 		return month + "";
 	}
 	
@@ -264,7 +267,7 @@ public class AbstractTest {
 	}
 	
 	protected String getToday() {
-		return getCurrentMonth() + "/" + getCurrentDay() + "/" + getCurrentYear();
+		return getCurrentYear() + "-" + getCurrentMonth() + "-" + getCurrentDay();
 	}
 	
 	protected void closeBrowserAndDriver(WebDriver driver) {
