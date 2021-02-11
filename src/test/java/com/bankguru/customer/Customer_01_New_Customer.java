@@ -61,7 +61,7 @@ public class Customer_01_New_Customer extends AbstractTest{
 	public void TC_01_New_Customer_With_Name_Can_Not_Be_Empty() {
 		log.info("New customer [Name cannot be empty] - Step 01: Click to 'New Customer' Link");
 		manageHomePage.openToPageInListboxByName(driver, "New Customer");
-		customerPage = PageGeneratorManager.getNewCustomerPage(driver);
+		customerPage = PageGeneratorManager.getCustomerPage(driver);
 		
 		log.info("New customer [Name cannot be empty] - Step 02: Click to 'Customer Name' Textbox");
 		customerPage.enterToTextboxByName(driver, "", "name");

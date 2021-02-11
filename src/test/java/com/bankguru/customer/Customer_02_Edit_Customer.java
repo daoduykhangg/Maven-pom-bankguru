@@ -66,7 +66,7 @@ public class Customer_02_Edit_Customer extends AbstractTest {
 
 		log.info("Pre-condition - Step 10: Click to 'New Customer' Link");
 		manageHomePage.openToPageInListboxByName(driver, "New Customer");
-		customerPage = PageGeneratorManager.getNewCustomerPage(driver);
+		customerPage = PageGeneratorManager.getCustomerPage(driver);
 
 		log.info("Pre-condition - Step 11: Enter to 'Customer Name' Textbox");
 		customerPage.enterToTextboxByName(driver, customerName, "name");

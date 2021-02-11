@@ -695,7 +695,7 @@ public class AbstractPage {
 		return getTextElement(driver, AbstractPageUI.HEADING_TEXT);
 	}
 
-	public String getCustomerInfoValueByRowname(WebDriver driver, String rowName) {
+	public String getTextValueByRowname(WebDriver driver, String rowName) {
 		waitForElementVisible(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_ROWNAME, rowName);
 		return getTextElement(driver, AbstractPageUI.DYNAMIC_CUSTOMER_INFO_BY_ROWNAME, rowName);
 	}

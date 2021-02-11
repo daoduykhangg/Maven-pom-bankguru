@@ -11,7 +11,7 @@ public class PageGeneratorManager {
 		return new ManageHomePagePO(driver);
 	}
 
-	public static CustomerPO getNewCustomerPage(WebDriver driver) {
+	public static CustomerPO getCustomerPage(WebDriver driver) {
 		return new CustomerPO(driver);
 	}
 
@@ -37,5 +37,9 @@ public class PageGeneratorManager {
 	
 	public static DepositPO getDepositPage(WebDriver driver) {
 		return new DepositPO(driver);
+	}
+	
+	public static BalanceEnquiryPO getBalanceEnquiryPage(WebDriver driver) {
+		return new BalanceEnquiryPO(driver);
 	}
 }
