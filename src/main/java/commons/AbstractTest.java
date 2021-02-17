@@ -1,6 +1,8 @@
 package commons;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Random;
@@ -10,6 +12,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,6 +21,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -168,6 +173,40 @@ public class AbstractTest {
 		} else {
 			throw new RuntimeException("Please input valid browser name value!");
 		}
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);
+		return driver;
+	}
+
+	protected WebDriver getBrowserDriver(String browserName, String url, String ipAddress, String portNumber) {
+		Browser browser = Browser.valueOf(browserName.toUpperCase());
+		DesiredCapabilities capability = null;
+
+		if (browser == Browser.FIREFOX_UI) {
+			WebDriverManager.firefoxdriver().setup();
+			capability = DesiredCapabilities.firefox();
+			capability.setBrowserName("firefox");
+			capability.setPlatform(Platform.WINDOWS);
+			FirefoxOptions options = new FirefoxOptions();
+			options.merge(capability);
+		} else if (browser == Browser.CHROME_UI) {
+			WebDriverManager.chromedriver().setup();
+			capability = DesiredCapabilities.chrome();
+			capability.setBrowserName("chrome");
+			capability.setPlatform(Platform.WINDOWS);
+			ChromeOptions options = new ChromeOptions();
+			options.merge(capability);
+		} else {
+			throw new RuntimeException("Please input valid browser name value!");
+		}
+		
+		try {
+			driver = new RemoteWebDriver(new URL(String.format("http://%s:%s/wd/hub", ipAddress, portNumber)), capability);
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		}
+		
 		driver.get(url);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(GlobalConstants.LONG_TIMEOUT, TimeUnit.SECONDS);

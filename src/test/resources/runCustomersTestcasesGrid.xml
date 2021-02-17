@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Bankguru" parallel="false" thread-count="2">
+<suite name="Bankguru" parallel="tests" thread-count="2">
 
 	<listeners>
 		<listener class-name="commons.MethodListener" />
@@ -15,15 +15,19 @@
 
 	<test name="Run on CHROME UI">
 		<parameter name="browser" value="chrome_ui" />
+		<parameter name="ip_address" value="192.168.1.121" />
+		<parameter name="portNumber" value="4321" />
 		<classes>
-			<class name="com.bankguru.customer.Customer_11_Payment" />
+			<class name="com.bankguru.customer.Customer_01_New_Customer2" />
 		</classes>
 	</test>
 
-<!-- 	<test name="Run on FIREFOX UI"> -->
-<!-- 		<parameter name="browser" value="firefox_ui" /> -->
-<!-- 		<classes> -->
-<!-- 			<class name="com.bankguru.customer.Customer_11_Payment" /> -->
-<!-- 		</classes> -->
-<!-- 	</test> -->
+	<test name="Run on FIREFOX UI">
+		<parameter name="browser" value="firefox_ui" />
+		<parameter name="ip_address" value="192.168.1.121" />
+		<parameter name="portNumber" value="4321" />
+		<classes>
+			<class name="com.bankguru.customer.Customer_01_New_Customer2" />
+		</classes>
+	</test>
 </suite>
