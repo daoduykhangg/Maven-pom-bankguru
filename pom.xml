@@ -1,18 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>maven-pom-bankguru</groupId>
-  <artifactId>maven-pom-bankguru</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>maven-pom-bankguru</name>
-  
-  <properties>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>maven-pom-bankguru</groupId>
+	<artifactId>maven-pom-bankguru</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>maven-pom-bankguru</name>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-
 		<webdriver.version>3.141.59</webdriver.version>
 		<testng.version>6.14.3</testng.version>
 		<jackson.version>2.9.4</jackson.version>
@@ -62,13 +59,13 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 			<version>${aspectj.version}</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
